@@ -1,7 +1,7 @@
-# Solana gRPC transaction stream Rust
+# Whirlpool gRPC transaction stream and parse instruction in Rust
 
 ```
-$ cargo run -- --endpoint <endpoint> --x-token <token> --address <address>
+$ cargo run -- --endpoint <endpoint> --x-token <token>
 ```
 
 ![screenshot](assets/screenshot.png?raw=true "Screenshot")
