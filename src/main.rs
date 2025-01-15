@@ -24,6 +24,8 @@ use {
 
 type TxnFilterMap = HashMap<String, SubscribeRequestFilterTransactions>;
 
+const WHIRLPOOL_PROGRAM_ID: &str = "whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc";
+
 #[derive(Debug, Clone, ClapParser)]
 #[clap(author, version, about)]
 struct Args {
@@ -32,9 +34,6 @@ struct Args {
 
     #[clap(long, help = "X-Token")]
     x_token: String,
-
-    #[clap(long, help = "address of the account to subscribe to")]
-    address: String,
 }
 
 impl Args {
@@ -58,7 +57,7 @@ impl Args {
             SubscribeRequestFilterTransactions {
                 vote: Some(false),
                 failed: Some(false),
-                account_include: vec![self.address.to_string()],
+                account_include: vec![WHIRLPOOL_PROGRAM_ID.to_string()],
                 account_exclude: vec![],
                 account_required: vec![],
                 signature: None,
@@ -389,7 +388,7 @@ async fn geyser_subscribe(
         
                         dedoced_txn.iter().for_each(|instruction| {
                         if instruction.instruction.program_id
-                            == Pubkey::from_str("whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc")
+                            == Pubkey::from_str(WHIRLPOOL_PROGRAM_ID)
                                 .expect("Failed to parse public key")
                         {
                             match WhirlpoolProgramIx::deserialize(&instruction.instruction.data) {
