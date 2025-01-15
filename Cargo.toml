@@ -21,4 +21,4 @@ solana-program = "2.1.7"
 solana-account-decoder-client-types = "2.1.7"
 serde = "1.0.217"
 serde_json = "1.0.135"
-whirlpool_interface = { path = "/path_to_your_machine/whirlpool_interface", features = ["serde"] }
+whirlpool_interface = { git = "https://github.com/impin2rex/whirlpool_interface", branch = "main", features = ["serde"] }
