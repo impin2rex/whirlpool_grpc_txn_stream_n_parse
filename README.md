@@ -4,7 +4,7 @@
 $ cargo run -- --endpoint <endpoint> --x-token <token>
 ```
 
-![screenshot](assets/screenshot.png?raw=true "Screenshot")
+![screenshot](assets/usage-screenshot.png?raw=true "Screenshot")
 
 ## Notes
 
