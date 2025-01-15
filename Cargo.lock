@@ -5087,6 +5087,7 @@ dependencies = [
 [[package]]
 name = "whirlpool_interface"
 version = "0.3.0"
+source = "git+https://github.com/impin2rex/whirlpool_interface?branch=main#949c19049163c983674ca7191e3674bf341db56e"
 dependencies = [
  "Inflector",
  "borsh 0.10.4",
